@@ -1,0 +1,48 @@
+{%extends 'users/userbase.html'%}
+{%block contents%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Results</title>
+</head>
+<body>
+
+<h1>Machine Learning Results</h1>
+
+<table border="1" cellpadding="5" style="margin: auto;">
+    <tr>
+        <th>Model</th>
+        <th>Accuracy</th>
+        <th>Classification Report</th>
+     </tr>
+     <tr>
+        <td>randomforestclassifier</td>
+        <td>{{ accuracy }}</td>
+        <td>{{ class_report }}</td>
+     </tr>
+    <tr>
+        <td>K-NN</td>
+        <td>{{ knn_accuracy }}</td>
+        <td>{{ knn_report }}</td>
+     </tr>
+    <tr>
+        <td>Support Vector Machine</td>
+        <td>{{ svm_accuracy }}</td>
+        <td>{{ svm_report }}</td>
+     </tr>
+    <!-- <tr>
+        <td>XG Boost</td>
+        <td>Accuracy: {{ XGB }}%</td>
+        <td></td>
+    </tr> -->
+</table>
+
+</body>
+</html>
+
+
+
+{%endblock%}
